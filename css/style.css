@@ -54,6 +54,7 @@ TABLE OF CONTENTS
 
     /* DEFINE BASE COLORS */
     --color-white: #fff;
+    --color-white-80: rgb(255 255 255 / .8);
     --color-black: #000;
     --color-black-80: rgb(0 0 0 / .8);
 
@@ -93,8 +94,8 @@ TABLE OF CONTENTS
 
      /* SECTION SPECIFIC */
     --color-siteheader-background: transparent;
-    --color-siteheader-links: var(--color-blue-300);
-    --color-siteheader-links-hover: var(--color-blue-900);
+    --color-siteheader-links: var(--color-white-80);
+    --color-siteheader-links-hover: var(--color-white);
     --color-sitefooter-background: var(--color-grey-100);
     --color-hero-background: var(--color-blue-100);
 
@@ -349,11 +350,11 @@ html {
     padding-inline: var(--unit-s);
 
     /* DISPLAY LOGO ON LEFT AND NAV ON RIGHT */
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
     /* align-items: center; */
-    gap: var(--unit-s);
-    flex-wrap: wrap;
+    /* gap: var(--unit-s); */
+    /* flex-wrap: wrap; */
 }
 
 /* REMOVE HEADER PADDING IF IT HAS A CONTAINER */
@@ -364,6 +365,10 @@ html {
 /* LOGO STYLING */
 .site-header .logo {
     display: flex;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    translate: -50% 0;
     align-items: center;
     gap: var(--unit-s);
 }
@@ -389,6 +394,12 @@ html {
 }
 
 /* MAIN SITE NAV */
+.site-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 .site-nav ul {
     margin: 0;
     padding: 0;
@@ -689,7 +700,8 @@ body > * {
     position: absolute;
     width: 100%;
     background-color: transparent;
-    border: 1px solid red;
+    /* display: flex;
+    justify-content: ; */
 }
 
 .site-header.on-top-of-hero + .site-main .hero {
