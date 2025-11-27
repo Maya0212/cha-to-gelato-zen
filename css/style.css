@@ -119,6 +119,7 @@ TABLE OF CONTENTS
     /* GLOBAL FONTS */
     --font-body: "Molengo", system-ui, Helvetica, arial, sans-serif;
     --font-headings: "Libre Caslon Display", Georgia, Times, "Times New Roman", serif;
+    /* --font-caslon-text: "Libre Caslon Text"; */
 
 }
 
@@ -199,10 +200,12 @@ img {
     text-align: center;
 }
 
-.vertical-text {
-  transform: rotate(90deg); /* 90度回転 */
-  top: 50%;    /* 上下中央あたりに */
-}
+/* 90度回転 */
+ /* 上下中央あたりに */
+/* .vertical-text {
+  transform: rotate(90deg); 
+  top: 50%;   
+} */
 
 
 /* CENTER PARAGRAPHS INSIDE CENTERED PARENTS */
@@ -609,10 +612,10 @@ section {
 
 /* BOTTONS */
 
-.button {
+/* .button {
     background-color: var(--color-links);
     color: var(--color-black-80);
-    padding: var(--unit-s) var(--unit-m);
+  
     margin-block: var(--unit-2xs);
     display: inline-block;
     text-decoration: none;
@@ -622,11 +625,9 @@ section {
 .button:hover {
     background-color: var(--color-links-hover);
     color: var(--color-white)
-}
+} */
 
-.site-footer .button {
-    padding: 13px;
-}
+
 
 /* CARDS */
 
@@ -974,7 +975,7 @@ section:has(.observe-me)  {
     background-position: center;
     /* padding: 1em; */
     text-align: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .hover-image:hover img {
@@ -997,39 +998,22 @@ section:has(.observe-me)  {
 
 /* HOW YOU CAN FIND US */
 
-#how-you-can-find-us {
+/* #how-you-can-find-us {
   position: relative;
-  background: url("../img/how-you-can-find-us.png") no-repeat center center/cover;
   color: white;
   padding: 60px 0;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-  min-height: 400px; /* 背景を確認できるように高さを確保 */
-}
-
-#how-you-can-find-us .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
+  min-height: 400px; 
 }
 
 #how-you-can-find-us::before {
-  /* 背景画像の上に少し暗いフィルターをかける（文字が読みやすくなる） */
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-}
+} */
 
-.overlay-content {
-  display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
-  position: relative;
-  z-index: 2; /* 背景より上に出す */
-  padding: 20px;
-}
-
+/* 
 .one-half {
   flex: 1 1 45%;
   min-width: 300px;
@@ -1049,6 +1033,196 @@ section:has(.observe-me)  {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  height: auto;
+  display: block;
+} */
+
+/* .overlay-content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2; 
+  padding: 20px;
 }
 
+.background-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-item {
+    position: absolute;
+    z-index: 3;
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+.one-half.text-block {
+    margin-right: 20px;
+} */
+
+/* #how-you-can-find-us .container {
+    background-image: url('../img/diamond-head.v2.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-left {
+    flex: 1;
+    color: white;
+    padding-right: 10px;
+}
+
+.image-right {
+    flex: 1;
+    text-align: right;
+}
+
+.image-right {
+    max-width: 100%;
+    height: auto;
+    max-width: 150px;
+} */
+
+#how-you-can-find-us .container {
+    background-image: url('../img/diamond-head.v2.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 80px 20px; 
+}
+
+.overlay-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.text-left {
+    flex: 1;
+    color: white;
+}
+
+.image-right {
+    flex: 1;
+    text-align: right;
+}
+
+.image-right img {
+    max-width: 180px;
+    height: auto;
+}
+
+/* SITE FOOTER */
+
+/* footer {
+    width: 100%;
+    height: auto;
+}
+
+.footer-background-container {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    background-image: url('../img/footer.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay-botton {
+    position: absolute;
+    cursor: pointer;
+    width: 10%;
+    height: 20%;
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
+footer {
+    position: relative;
+    width: 100%;
+}
+
+.footer-background-container {
+    position: relative;
+    width: 100%;
+}
+
+.footer-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 全てのボタンの共通設定（自由配置のため absolute を使う） */
+.footer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ボタン画像をきれいに */
+.footer-content .button img {
+    width: 10vw;   /* 画面幅の15% → 小さい画面では自動で小さくなる */
+    max-width: 100px;
+    min-width: 1px;
+    height: auto;
+    transition: transform .3s ease;
+}
+
+.footer-content .button:hover img {
+    transform: scale(1.1);
+}
+
+.footer-content a:nth-child(1) {
+    position: absolute;
+    top: 65%;
+    left: 25%;
+}
+
+.footer-content a:nth-child(2) {
+    position: absolute;
+    top: 27%;
+    left: 35%;
+}
+
+.footer-content a:nth-child(3) {
+    position: absolute;
+    top: 65%;
+    left: 77%;
+}
+
+.footer-content a:nth-child(4) {
+    position: absolute;
+    top: 35%;
+    right: 3.5%;
+}
+
+.footer-content a:nth-child(5) {
+    position: absolute;
+    bottom: 24%;
+    left: 5%;
+}
 
