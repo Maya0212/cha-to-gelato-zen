@@ -949,7 +949,6 @@ section:has(.observe-me)  {
 
 #tea-bar-zen .vertical-text {
   position: absolute;
-  left: 0;      /* 左端に寄せる */
   transform-origin: left bottom; /* 回転の基準点を調整 */
   color: var(--color-white);
 }
@@ -997,118 +996,32 @@ section:has(.observe-me)  {
 /* JSで切り替えやフェードをサポートするのでここではopacityのみ指定 */
 
 /* HOW YOU CAN FIND US */
-
-/* #how-you-can-find-us {
-  position: relative;
-  color: white;
-  padding: 60px 0;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-  min-height: 400px; 
-}
-
-#how-you-can-find-us::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-} */
-
-/* 
-.one-half {
-  flex: 1 1 45%;
-  min-width: 300px;
-}
-
-.text-block h1,
-.text-block h2 {
-  margin-bottom: 10px;
-}
-
-.text-block p {
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-
-.map-block img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  height: auto;
-  display: block;
-} */
-
-/* .overlay-content {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2; 
-  padding: 20px;
-}
-
-.background-image {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.overlay-item {
-    position: absolute;
-    z-index: 3;
-    flex: 1 1 45%;
-    min-width: 300px;
-}
-
-.one-half.text-block {
-    margin-right: 20px;
-} */
-
 /* #how-you-can-find-us .container {
     background-image: url('../img/diamond-head.v2.png');
     background-size: cover;
     background-position: center;
-    position: relative;
     width: 100%;
-    max-height: 400px;
-}
-
-.overlay-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.text-left {
-    flex: 1;
-    color: white;
-    padding-right: 10px;
-}
-
-.image-right {
-    flex: 1;
-    text-align: right;
-}
-
-.image-right {
-    max-width: 100%;
+    margin-left: 0; 
+    margin-right: 0;
     height: auto;
-    max-width: 150px;
 } */
 
-#how-you-can-find-us .container {
-    background-image: url('../img/diamond-head.v2.png');
+#how-you-can-find-us {
+    background-image: url('../img/diamond-head.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    padding: 80px 20px; 
+    padding: 0;  /* 縦余白だけ */
+    height: auto;
+    display: block;
+    min-height: 900px;
+}
+
+#how-you-can-find-us .container {
+    /* background-image いらない */
+    padding: 0 20px;
+    justify-content: center;
 }
 
 .overlay-content {
@@ -1116,6 +1029,8 @@ section:has(.observe-me)  {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    padding-top: 350px;
+    max-width: 80%;
 }
 
 .text-left {
@@ -1129,8 +1044,9 @@ section:has(.observe-me)  {
 }
 
 .image-right img {
-    max-width: 180px;
+    /* max-width: 180px; */
     height: auto;
+
 }
 
 /* SITE FOOTER */
@@ -1226,3 +1142,26 @@ footer {
     left: 5%;
 }
 
+.clouds-container {
+  position: absolute; /* 背景として配置 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* セクションの縦幅に合わせる */
+  pointer-events: none; /* 雲がクリックを邪魔しない */
+  overflow: hidden;
+  z-index: 1; /* コンテンツより下に置く場合は0に調整 */
+}
+
+.cloud {
+  position: absolute;
+  top: 10%; /* 適当に調整 */
+  left: 20%; /* 適当に調整 */
+  width: 200px;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transform-origin: center center;
+  transition: transform 0.2s linear, opacity 0.2s linear;
+}

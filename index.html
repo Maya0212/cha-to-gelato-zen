@@ -48,7 +48,7 @@
             <ul>
                 <li class="slide-from-top-and-fade-in delay-5"><img href="index.html"></img></li>
                 <li class="slide-from-top-and-fade-in delay-6"><a href="styleguide.html">Menu</a></li>
-                <li class="slide-from-top-and-fade-in delay-6"><a href="styleguide.html">About</a></li>
+                <li class="slide-from-top-and-fade-in delay-6"><a href="#about">About</a></li>
                 <li class="slide-from-top-and-fade-in delay-6"><a href="styleguide.html">Contact</a></li>
             </ul>
             <ul>
@@ -70,99 +70,107 @@
                 <p class="slide-from-top-and-fade-in delay-2">We provide Japanese quality hospitality</p>
         </section>
 
-        <section id="menu">
-            <div class="container">
+        <section id="menu-to-reservation">
+            <!-- 雲を入れるコンテナ -->
+            <div class="clouds-container">
+                <div class="cloud" style="background-image:url('img/cloud-1.png')"></div>
+                <div class="cloud" style="background-image:url('img/cloud-2.png')"></div>
+                <div class="cloud" style="background-image:url('img/cloud-3.png')"></div>
+            </div>
 
-                <div class="row">
-                    <div class="one-third">
-                        <div class="hover-image bar-menu">
-                            <img src="img/new-bar-menu.png" alt="bar menu" width="500" height="500">
-                            <h2>Bar Menu</h2>
+            <section id="menu">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="one-third">
+                            <div class="hover-image bar-menu">
+                                <img src="img/new-bar-menu.png" alt="bar menu" width="500" height="500">
+                                <h2>Bar Menu</h2>
+                            </div>
+                        </div>
+
+                        <div class="one-third">
+                            <div class="hover-image macha-menu">
+                                <img src="img/new-cha-menu.png" alt="macha menu" width="500" height="500">
+                                <h2>Cha Menu</h2>
+                            </div>
+                        </div>
+
+                            <div class="one-third">
+                                <div class="hover-image gelato-menu">
+                                    <img src="img/new-gelato-menu-images.png" alt="gelato menu" width="500" height="500">
+                                    <h2>Gelato Menu</h2>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <section class="text-centered">
+                            <a href="#features" class="button scale-and-fade-in">See Full Menu</a>
+                        </section>
+
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="container">
+
+                    <div class="row swapped">
+                        <div class="one-half">
+                            <h2>"100% Organic Japanese Green Tea"</h2>
+                            <img src="img/about-us.jpg" alt="Placeholder image" width="2000" height="1000">
+                        </div>
+                        <div class="one-half">          
+                            <h2 class="vertical-text">From<br>
+                                Farm To Zen</h2>
+                            <p>We has been opened our cafe & bar "然 zen."on April 5th, 2024.We specialize in organic Japanese tea/matcha & Japanese style Gelato.<br>
+                            <br>
+                            Our tea leaf are all single-origin tea leaves sourced directly from Japanese tea farms. We provide Japanese quality hospitality (Omotenashi) .<br>
+                            <br>
+                            Please enjoy our products and service.</p>
                         </div>
                     </div>
 
-                    <div class="one-third">
-                        <div class="hover-image macha-menu">
-                            <img src="img/new-cha-menu.png" alt="macha menu" width="500" height="500">
-                            <h2>Cha Menu</h2>
-                        </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <div class="speech-bubble top-left">
+                        <!-- テキストコンテンツと矢印（疑似要素で作成）が入ります -->
+                        <p>I am living in Kapahulu and I loves matcha. She heard there is a new match cafe, so she came here. The worker is friendly and the price is affordable. She fell in love with the cafe as soon as she entered.</p>
+                        <div class="author">Mala</div>
+                    </div>
+                    
+                    <div class="speech-bubble top-right">
+                        <!-- テキストコンテンツ -->
+                        <p>He visited Hawaii with his family and his friend recommended this cafe. They wanted to get dessert after dinner and almost all the cafes were already closed. However, this cafe was open until late, and he enjoyed eating gelato in a relaxed atmosphere.</p>
+                        <div class="author">Kento</div>
                     </div>
 
-                    <div class="one-third">
-                        <div class="hover-image gelato-menu">
-                            <img src="img/new-gelato-menu-images.png" alt="gelato menu" width="500" height="500">
-                            <h2>Gelato Menu</h2>
-                        </div>
+                    <div class="speech-bubble bottom-left">
+                        <!-- テキストコンテンツ -->
+                        <p>She is living in Hawaii, and she loves Japanese sake. She has a daily routine of drinking sake after dinner with her husband. She was looking for a bar which serves Nihonshu and she is starting to like this bar.</p>
+                        <div class="author">Mia</div>
                     </div>
                 </div>
+            </section>
 
-
-                <section class="text-centered">
-                    <a href="#features" class="button scale-and-fade-in">See Full Menu</a>
-                </section>
-
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-
-                <div class="row swapped">
-                    <div class="one-half">
-                        <h2>"100% Organic Japanese Green Tea"</h2>
-                        <img src="img/about-us.jpg" alt="Placeholder image" width="2000" height="1000">
-                    </div>
-                    <div class="one-half">          
-                        <h2 class="vertical-text">From<br>
-                            Farm To Zen</h2>
-                        <p>We has been opened our cafe & bar "然 zen."on April 5th, 2024.We specialize in organic Japanese tea/matcha & Japanese style Gelato.<br>
-                        <br>
-                        Our tea leaf are all single-origin tea leaves sourced directly from Japanese tea farms. We provide Japanese quality hospitality (Omotenashi) .<br>
-                        <br>
-                        Please enjoy our products and service.</p>
-                    </div>
+            <section id="tea-bar-zen">
+                <div class="container">
+                    
+                    <img src="img/tea-bar-zen.png" alt="bar" width="100" height="100">
+                    <h2 class="vertical-text overlay-text">Tea Bar<br>Zen</h2>
+                    <p>Thursday<br>
+                        6:00pm - 12:00am<br>
+                        Friday & Saturday<br>
+                        1:00pm - 2:00am<br>
+                        Reservation only<br>
+                    </p>
                 </div>
+            </section>
 
-            </div>
         </section>
-
-        <section>
-            <div class="container">
-                <div class="speech-bubble top-left">
-                    <!-- テキストコンテンツと矢印（疑似要素で作成）が入ります -->
-                    <p>I am living in Kapahulu and I loves matcha. She heard there is a new match cafe, so she came here. The worker is friendly and the price is affordable. She fell in love with the cafe as soon as she entered.</p>
-                    <div class="author">Mala</div>
-                </div>
-                
-                <div class="speech-bubble top-right">
-                    <!-- テキストコンテンツ -->
-                    <p>He visited Hawaii with his family and his friend recommended this cafe. They wanted to get dessert after dinner and almost all the cafes were already closed. However, this cafe was open until late, and he enjoyed eating gelato in a relaxed atmosphere.</p>
-                    <div class="author">Kento</div>
-                </div>
-
-                <div class="speech-bubble bottom-left">
-                    <!-- テキストコンテンツ -->
-                    <p>She is living in Hawaii, and she loves Japanese sake. She has a daily routine of drinking sake after dinner with her husband. She was looking for a bar which serves Nihonshu and she is starting to like this bar.</p>
-                    <div class="author">Mia</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="tea-bar-zen">
-            <div class="container">
-                
-                <img src="img/tea-bar-zen.png" alt="bar" width="100" height="100">
-                <h2 class="vertical-text overlay-text">Tea Bar<br>Zen</h2>
-                <p>Thursday<br>
-                    6:00pm - 12:00am<br>
-                    Friday & Saturday<br>
-                    1:00pm - 2:00am<br>
-                    Reservation only<br>
-                </p>h2>How You Can Find Us?</h2>
-
-            </div>
-        </section>
-
 
         <section id="how-you-can-find-us">
             <div class="container">
