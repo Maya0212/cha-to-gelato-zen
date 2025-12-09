@@ -29,6 +29,7 @@ TABLE OF CONTENTS
     # HR (HORIZONTAL RULE)
     # CODE BLOCKS
     # SWIPER SLIDER (CAROUSEL)
+    # BLOCKQUOTE
 
     (WE WILL ADD MORE HERE)
 
@@ -120,6 +121,12 @@ TABLE OF CONTENTS
     --font-body: "Molengo", system-ui, Helvetica, arial, sans-serif;
     --font-headings: "Libre Caslon Display", Georgia, Times, "Times New Roman", serif;
     /* --font-caslon-text: "Libre Caslon Text"; */
+    .libre-caslon-text-regular-italic {
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 200;
+    font-style: italic;
+    opacity: 70%;
+}
 
 }
 
@@ -143,6 +150,13 @@ h1 {
     overflow-wrap: break-word;
 }
 
+#about h2 {
+    margin: 0;
+}
+
+#tea-bar-zen h2 {
+    font-size: 3em;
+}
 /* LIMIT THE NUMBER OF CHARACTERS PER LINE FOR ALL PARAGRAPHS */
 p {
     max-inline-size: 66ch;
@@ -176,6 +190,7 @@ body {
 
 h1, h2, h3, h4 {
     font-family: var(--font-headings);
+    font-size: var(--unit-m);
 }
 
 h1 {
@@ -338,7 +353,7 @@ html {
 } */
 
 .one-half {
-  width: 50%;
+  width: 70%;
   position: relative; /* 内部の絶対配置に必要 */
   text-align: left;   /* 左寄せ */
 }
@@ -553,7 +568,7 @@ section {
 
     h2 {
     font-family: "Long Cang", cursive;
-    font-weight: 400;
+    font-weight: 450;
     font-style: normal;
     font-size: var(--unit-2xl); 
     margin: 0;   
@@ -564,7 +579,7 @@ section {
     }
     
     h1, h2, h3 {
-        color: #fff;
+        color: #fff; 
     }
 }
 
@@ -678,7 +693,28 @@ pre:has(code) {
     border-radius: 100%;
 }
 
+/* BLOCKQUOTE */
 
+blockquote {
+    margin: 0;
+}
+
+blockquote::before {
+    content: "";
+    border-bottom: 1px solid black;
+    width: 80px;
+    display: inline-block;
+    position: relative;
+    top: -9px;
+    margin-right: 1em;
+}
+
+
+blockquote {
+      font-family: "Libre Caslon Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
 
 
 /* ------------------
@@ -891,16 +927,32 @@ section:has(.observe-me)  {
     line-height: 1.5;
     /* この例の位置は固定値です。配置したい場所に合わせて調整してください */
     margin: 50px 0 0 0px; 
+    animation: moveX 10s ease-in-out infinite, floatY 2s ease-in-out infinite;
+}
+
+@keyframes moveX {
+  0%   { transform: translateX(-14px); }
+  50%   { transform: translateX(10px); }
+  100% { transform: translateX(-14px); }
+}
+
+/* ふわふわ上下 */
+@keyframes floatY {
+0%   { transform: translateY(-10px); }
+  50%   { transform: translateY(10px); }
+  100% { transform: translateY(-10px); }
 }
 
 .speech-bubble.top-right {
     margin-left: auto;   /* 左側のマージンを自動的に最大まで広げる */
     margin-right: 0;
+    animation-duration: 12s, 3.5s;
 }
 
 .speech-bubble.top-left {
     margin-left: 20%;   /* 左側のマージンを自動的に最大まで広げる */
     margin-right: 0;
+    animation-duration: 10s, 4s;
 }
 
 
@@ -927,6 +979,10 @@ section:has(.observe-me)  {
     left: 5px; 
 }
 
+#speech-bubble .container {
+    position: relative;
+}
+
 /* 画面の幅が600px以下になったら縦並びにする（ブレークポイントの設定） */
 @media (max-width: 600px) {
     .speech-bubble {
@@ -936,16 +992,15 @@ section:has(.observe-me)  {
     
 }
 
-/* DIAMOND HEAD */
+/* RESERVATION & DIAMONDHEAD*/
 #tea-bar-zen {
   position: relative; /* 子要素をabsoluteで動かすために必要 */
 }
 
-#tea-bar-zen .vertical-text {
-  position: absolute;
-  transform-origin: left bottom; /* 回転の基準点を調整 */
-  color: var(--color-white);
+#how-you-can-find-us .vertical-text {
+    color: var(--color-white);
 }
+
 
 /* MENU */
 
@@ -1140,8 +1195,8 @@ footer {
     background-image: url('../img/after-hover-about.png');
 }
 
-.hover-image.macha-menu:hover {
-    background-image: url('../img/new-cha-menu-hover.png');
+.hover-image.menu:hover {
+    background-image: url('../img/after-hover-menu.png');
 }
 
 .hover-image.gelato-menu:hover {
@@ -1159,3 +1214,10 @@ footer {
 .button:hover img {
     transform: scale(1.1);
 }
+
+/* do not scale hover-imGE BUTTONS */
+.button:hover .hover-image img {
+    transform: scale(1);
+}
+
+/* RESERVATION */

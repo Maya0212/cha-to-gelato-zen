@@ -15,6 +15,10 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -118,32 +122,45 @@
             <section id="about">
                 <div class="container">
 
-                    <div class="row swapped">
-                        <div class="one-half">
-                            <h2>"100% Organic Japanese Green Tea"</h2>
-                            <img src="img/about-us.jpg" alt="Placeholder image" width="2000" height="1000">
+                    <div class="row">
+                     
+                        <div class="one-third">
+                           <h2 class="vertical-text left-col">From
+                                        Farm To Zen</h2>
                         </div>
+                        <div class="two-thirds">
+                                    <blockquote>
+                                        "100% Organic Japanese Green Tea"
+                                    </blockquote>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
                         <div class="one-half">          
-                            <h2 class="vertical-text">From<br>
-                                Farm To Zen</h2>
                             <p>We has been opened our cafe & bar "然 zen."on April 5th, 2024.We specialize in organic Japanese tea/matcha & Japanese style Gelato.<br>
                             <br>
                             Our tea leaf are all single-origin tea leaves sourced directly from Japanese tea farms. We provide Japanese quality hospitality (Omotenashi) .<br>
                             <br>
                             Please enjoy our products and service.</p>
                             <section class="text-centered">
-                            <a href="#features" class="button scale-and-fade-in">
-                                <div class="hover-image"></div>
-                                    <img src="img/get-the-inside-scoop-botton.png" alt="menu">
-                            </a>
-                        </section>
+                                <a href="#features" class="button scale-and-fade-in">
+                                    <div class="hover-image"></div>
+                                        <img src="img/get-the-inside-scoop-botton.png" alt="menu">
+                                </a>
+                            </section>
+                        </div>
+
+                        <div class="one-half">
+                            <img src="img/about-us.jpg" alt="Placeholder image" width="2000" height="1000">
                         </div>
                     </div>
 
                 </div>
             </section>
 
-            <section>
+            <section id="speech-bubble">
                 <div class="container">
                     <div class="speech-bubble top-left">
                         <!-- テキストコンテンツと矢印（疑似要素で作成）が入ります -->
@@ -167,21 +184,30 @@
 
             <section id="tea-bar-zen">
                 <div class="container">
+                    <blockquote>“Experience the charm of Japanese yea-infused cooktails at our bar”</blockquote>
+                    <div class="row">
+                        <div class="one-third">
+                         <h2>Tea Bar<br>Zen</h2> 
+                        </div>
+
+                        <div class="one-third">
+                            <img src="img/tea-bar-zen.png" alt="bar" width="200" height="200">
+                        </div>
+                        
+                        <div class="one-third">
+                            <p>Thursday<br>
+                                6:00pm - 12:00am<br>
+                                Friday & Saturday<br>
+                                1:00pm - 2:00am<br>
+                                Reservation only<br>
+                            </p>
+                                    <a href="#features" class="button scale-and-fade-in">
+                                        <div class="hover-image"></div>
+                                            <img src="img/reservation-botton.v2.png" alt="menu">
+                                    </a>
+                        </div>
+                    </div>
                     
-                    <img src="img/tea-bar-zen.png" alt="bar" width="100" height="100">
-                    <h2 class="vertical-text overlay-text">Tea Bar<br>Zen</h2>
-                    <p>Thursday<br>
-                        6:00pm - 12:00am<br>
-                        Friday & Saturday<br>
-                        1:00pm - 2:00am<br>
-                        Reservation only<br>
-                    </p>
-                    <section class="text-centered">
-                            <a href="#features" class="button scale-and-fade-in">
-                                <div class="hover-image"></div>
-                                    <img src="img/reservation-botton.v2.png" alt="menu">
-                            </a>
-                    </section>
                 </div>
             </section>
 
@@ -191,9 +217,9 @@
             <div class="container">
                 <div class="overlay-content">
                     <div class="one-half text-left">
-                        <h2>How You Can Find Us?</h2>
+                        <h2 class="vertical-text overlay-text">How You Can Find Us?</h2>
 
-                        <h1>Cafe</h1>
+                        <h1 class="vertical-text overlay-text">Cafe</h1>
                         <p>
                         Tuesday - Sunday<br>
                         12:00pm - 5:00pm<br>
@@ -201,7 +227,7 @@
                         No Reservations
                         </p>
 
-                        <h1>Bar</h1>
+                        <h1 class="vertical-text overlay-text">Bar</h1>
                         <p>
                         Thursday<br>
                         6:00pm - 12:00am<br>
@@ -209,13 +235,11 @@
                         11:00pm - 2:00am<br>
                         Reservations only
                         </p>
-                        <p>744 Kapahulu, Honolulu, Hawaii 96815</p>
-                        <section class="text-centered">
+                        <p>744 Kapahulu, Honolulu, Hawaii 96815</p>                      
                             <a href="#features" class="button scale-and-fade-in">
                                 <div class="hover-image"></div>
                                     <img src="img/visit-our-space-botton.png" alt="menu">
-                            </a>
-                        </section>
+                            </a>                    
                     </div>
 
                     <div class="one-half image-right">
@@ -237,8 +261,9 @@
                 <img src="img/reservation-botton.png" alt="reservation">
             </a> -->
             <a href="menu.html" class="button scale-and-fade-in">
-                <div class="hover-image menu"></div>
-                <img src="img/before-hover-menu.png" alt="menu">
+                <div class="hover-image menu">
+                    <img src="img/before-hover-menu.png" alt="menu">
+                </div>
             </a>
             <a href="about.html" class="button scale-and-fade-in">
                 <div class="hover-image"></div>
