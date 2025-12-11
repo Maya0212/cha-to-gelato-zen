@@ -21,6 +21,8 @@ TABLE OF CONTENTS
         #SITE NAV
     # MAIN
         # SECTIONS
+            #HERO
+            #TEA BAR
     # FOOTER
 
 # UI COMPONENTS
@@ -213,6 +215,14 @@ img {
 
 .text-centered {
     text-align: center;
+}
+
+/* USE THIS PEARENT CLASS TO CENTER CHILDREN */
+.centered-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* 90度回転 */
@@ -549,6 +559,7 @@ section {
     padding-block: var(--unit-2xl);
 }
 
+/* HERO SECTION  */
 .hero {
     background-color: var(--color-hero-background);
     padding-block: var(--unit-4xl);
@@ -587,6 +598,16 @@ section {
     padding-inline: 0;
 }
 
+/* TEA BAR ZEN SECTION STYLE */
+#tea-bar-zen {
+    blockquote {
+        padding-bottom: 3em;
+    }
+
+    h2 {
+        margin: 0;
+    }
+}
 
 /* SITE FOOTER */
 .site-footer {
@@ -1199,8 +1220,14 @@ footer {
     background-image: url('../img/after-hover-menu.png');
 }
 
-.hover-image.gelato-menu:hover {
-    background-image: url('../img/gelato-menu-hover.png');
+.hover-image.reservation:hover {
+    background-image: url('../img/after-hover-reservation.png');
+}
+.hover-image.location:hover {
+    background-image: url('../img/after-hover-location.png');
+}
+.hover-image.contact:hover {
+    background-image: url('../img/after-hover-contact.png');
 }
 
 /* MENU BOTTON */
