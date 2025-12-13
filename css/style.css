@@ -636,6 +636,10 @@ section {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+.hover-image.footer {
+    scale: 3;
+}
+
 
 /* REMOVE FOOTER PADDING IF IT HAS A CONTAINER */
 .site-footer:has(.container) {
@@ -1116,6 +1120,16 @@ section:has(.observe-me)  {
 .image-right img {
     /* max-width: 180px; */
     height: auto;
+    scale: 1.5;
+
+    @media ( width > 768px ) { 
+        padding-top: 100px;
+    }
+
+    @media( width < 768px ) {
+        padding-left: 20px;
+    }
+    
 }
 
 /* SITE FOOTER */
@@ -1148,7 +1162,7 @@ footer {
 /* ボタン画像をきれいに */
 .footer-content .button img {
     width: 10vw;   
-    max-width: 100px;
+    /* max-width: 100px; */
     min-width: 1px;
     height: auto;
     transition: transform .3s ease;
@@ -1233,10 +1247,10 @@ footer {
 /* MENU BOTTON */
 .button img {
     width: 10vw;   
-    max-width: 100px;
     min-width: 1px;
     height: auto;
     transition: transform .3s ease;
+    /* scale: 1.25; */
 }
 .button:hover img {
     transform: scale(1.1);
