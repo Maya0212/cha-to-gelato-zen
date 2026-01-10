@@ -652,20 +652,21 @@ section {
 
 /* BOTTONS */
 
-/* .button {
-    background-color: var(--color-links);
-    color: var(--color-black-80);
+.button.hand-drawn {
+  display: inline-block;
+  padding: 1em 1.5em;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  border-radius: 300px 100px 225px 100px/35px 225px 35px 255px;
+  border: solid 2px rgba(0, 0, 0, 0.5);
+  background-color: wheat;
   
-    margin-block: var(--unit-2xs);
-    display: inline-block;
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    line-height: 1;
+  &:hover {
+    background-color: #814D22;
+    color: var(--color-white);
+  }
+  
 }
-.button:hover {
-    background-color: var(--color-links-hover);
-    color: var(--color-white)
-} */
 
 
 
@@ -1104,7 +1105,7 @@ section:has(.observe-me)  {
     align-items: center;
     gap: 40px;
     padding-top: 350px;
-    max-width: 80%;
+    padding-bottom: 100px;
 }
 
 .text-left {
@@ -1120,15 +1121,15 @@ section:has(.observe-me)  {
 .image-right img {
     /* max-width: 180px; */
     height: auto;
-    scale: 1.5;
+    /* scale: 1.1; */
 
     @media ( width > 768px ) { 
         padding-top: 100px;
     }
 
-    @media( width < 768px ) {
+    /* @media( width < 768px ) {
         padding-left: 20px;
-    }
+    } */
     
 }
 
@@ -1246,8 +1247,8 @@ footer {
 
 /* MENU BOTTON */
 .button img {
-    width: 10vw;   
-    min-width: 1px;
+    /* width: 10vw;   
+    min-width: 1px; */
     height: auto;
     transition: transform .3s ease;
     /* scale: 1.25; */
