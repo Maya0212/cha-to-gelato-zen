@@ -668,6 +668,34 @@ section {
   
 }
 
+/* You can find the full CSS code in the referenced web documents */
+.dropdown {
+  position: relative; /* Container for the dropdown */
+  display: inline-block;
+}
+
+.dropbtn {
+  /* Styling for the button */
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  /* Other styling */
+}
+
+.dropdown-content a {
+  /* Styling for links */
+}
+
+.dropdown-content a:hover {
+  /* Styling for hovered links */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show on hover */
+}
+
 
 
 /* CARDS */
