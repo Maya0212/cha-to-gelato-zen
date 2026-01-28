@@ -46,6 +46,9 @@ TABLE OF CONTENTS
 # ANIMATION
     #REGULAR ON PAGE LOAD ANIMATION
     # SCROLL-TRIGGERED ANIMATIONS
+
+# MENU
+    #
 ----------------------- */
 
 /* ------------------
@@ -152,6 +155,7 @@ h1 {
     overflow-wrap: break-word;
 }
 
+
 #about h2 {
     margin: 0;
 }
@@ -161,7 +165,9 @@ h1 {
 }
 /* LIMIT THE NUMBER OF CHARACTERS PER LINE FOR ALL PARAGRAPHS */
 p {
-    max-inline-size: 66ch;
+    max-inline-size: 100ch;
+    font-size: 1.3rem;
+    line-height: 1.7;
 }
 
 /* REMOVE WIDOWS FOR ALL PARAGRAPHS AND LIST ITEMS*/
@@ -192,14 +198,19 @@ body {
 
 h1, h2, h3, h4 {
     font-family: var(--font-headings);
-    font-size: var(--unit-m);
+    font-size: var(--unit-l);
+    color: var(--color-green-900);
 }
 
 h1 {
     font-family: "Kaushan Script", cursive;
-    font-size: 1.7em;
+    font-size: 4em;
 }
 
+#menu h1 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 6em;
+}
 /* GLOBAL MEDIA */
 
 /* IMAGES (Responsive)
@@ -581,7 +592,7 @@ section {
     font-family: "Long Cang", cursive;
     font-weight: 450;
     font-style: normal;
-    font-size: var(--unit-2xl); 
+    font-size: var(--unit-3xl); 
     margin: 0;   
     }
     
@@ -655,11 +666,11 @@ section {
 .button.hand-drawn {
   display: inline-block;
   padding: 1em 1.5em;
-  color: rgba(0, 0, 0, 0.5);
+  color: #814D22;
   text-decoration: none;
   border-radius: 300px 100px 225px 100px/35px 225px 35px 255px;
-  border: solid 2px rgba(0, 0, 0, 0.5);
-  background-color: wheat;
+  border: solid 2px #814D22;
+  background-color: #F5F3EC;
   
   &:hover {
     background-color: #814D22;
@@ -681,7 +692,11 @@ section {
 .dropdown-content {
   display: none; /* Hidden by default */
   position: absolute;
-  /* Other styling */
+  /* box styling */
+  width: 115px;
+  padding: 3px;
+  background-color: #9c612d;
+  border-radius: 10px;
 }
 
 .dropdown-content a {
@@ -755,19 +770,21 @@ blockquote {
 
 blockquote::before {
     content: "";
-    border-bottom: 1px solid black;
-    width: 80px;
+    border-bottom: 1.2px solid var(--color-green-600);
+    width: 90px;
     display: inline-block;
     position: relative;
-    top: -9px;
+    top: -6px;
     margin-right: 1em;
 }
 
 
 blockquote {
-      font-family: "Libre Caslon Text", serif;
-  font-weight: 400;
-  font-style: italic;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-green-600);
+    /* top: -10px; */
 }
 
 
@@ -1290,4 +1307,20 @@ footer {
     transform: scale(1);
 }
 
-/* RESERVATION */
+/* Menu */
+.options-menu {
+    /* メインの吹き出しのスタイル */
+    position: relative; /* 疑似要素の基準位置 */
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 13px; /* 角丸 */
+    background-color: var(--color-green); /* 白い背景 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影 */
+    /* テキストのはみ出し防止 */
+    word-wrap: break-word;
+    line-height: 0.5;
+    margin-top: 50px;
+    /* この例の位置は固定値です。配置したい場所に合わせて調整してください */
+    /* margin: 50px 0 0 0px; 
+    animation: moveX 10s ease-in-out infinite, floatY 2s ease-in-out infinite; */
+}
