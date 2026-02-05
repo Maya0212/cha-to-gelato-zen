@@ -196,21 +196,31 @@ body {
     line-height: 1.4;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
     font-family: var(--font-headings);
     font-size: var(--unit-l);
-    color: var(--color-green-900);
+    color: var(--color-black-80);
 }
 
-h1 {
-    font-family: "Kaushan Script", cursive;
-    font-size: 4em;
+h3 {
+    font-size: 5em;
+    color: black;
+    opacity: 10%;
+    font-family: var(--font-headings);
+    margin-bottom: 0;
 }
 
-#menu h1 {
+h4 {
+    margin-top: 0;
+}
+
+#full-menu h2 {
     font-family: "Kaushan Script", cursive;
     font-size: 6em;
+    margin-top: 0;
 }
+
+
 /* GLOBAL MEDIA */
 
 /* IMAGES (Responsive)
@@ -378,6 +388,7 @@ html {
   position: relative; /* 内部の絶対配置に必要 */
   text-align: left;   /* 左寄せ */
 }
+
 
 /* FOR DEMO PURPOSES ONLY */
 .row.demo > * {
@@ -1070,6 +1081,7 @@ section:has(.observe-me)  {
 
 #how-you-can-find-us .vertical-text {
     color: var(--color-white);
+    font-size: 3rem;
 }
 
 
