@@ -98,7 +98,7 @@ TABLE OF CONTENTS
     --color-sitefooter-background: transparent;
     --color-hero-background: var(--color-blue-100);
 
-     /* SECTION SPECIFIC */
+    /* SECTION SPECIFIC */
     --color-siteheader-background: transparent;
     --color-siteheader-links: var(--color-white-80);
     --color-siteheader-links-hover: var(--color-white);
@@ -125,13 +125,14 @@ TABLE OF CONTENTS
     /* GLOBAL FONTS */
     --font-body: "Molengo", system-ui, Helvetica, arial, sans-serif;
     --font-headings: "Libre Caslon Display", Georgia, Times, "Times New Roman", serif;
+
     /* --font-caslon-text: "Libre Caslon Text"; */
     .libre-caslon-text-regular-italic {
-    font-family: "Libre Caslon Text", serif;
-    font-weight: 200;
-    font-style: italic;
-    opacity: 70%;
-}
+        font-family: "Libre Caslon Text", serif;
+        font-weight: 200;
+        font-style: italic;
+        opacity: 70%;
+    }
 
 }
 
@@ -142,7 +143,9 @@ body {
 }
 
 /* HEADINGS */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--color-body-text-dark);
 
     /* ADD SUPPORT FOR TEXTWRAP BALANCE */
@@ -163,6 +166,7 @@ h1 {
 #tea-bar-zen h2 {
     font-size: 3em;
 }
+
 /* LIMIT THE NUMBER OF CHARACTERS PER LINE FOR ALL PARAGRAPHS */
 p {
     max-inline-size: 100ch;
@@ -171,7 +175,8 @@ p {
 }
 
 /* REMOVE WIDOWS FOR ALL PARAGRAPHS AND LIST ITEMS*/
-p, li { 
+p,
+li {
     text-wrap: pretty;
 }
 
@@ -196,7 +201,8 @@ body {
     line-height: 1.4;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--font-headings);
     font-size: var(--unit-l);
     color: var(--color-black-80);
@@ -247,7 +253,7 @@ img {
 }
 
 /* 90度回転 */
- /* 上下中央あたりに */
+/* 上下中央あたりに */
 /* .vertical-text {
   transform: rotate(90deg); 
   top: 50%;   
@@ -271,10 +277,14 @@ img {
 /* GLOBAL RESETS */
 
 /* Remove the default 8pm margin on body */
-body {  margin: 0; }
+body {
+    margin: 0;
+}
 
 /* Set all elements to box sizing border box */
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 /* SMOOTH SCROLLING */
 html {
@@ -299,20 +309,19 @@ html {
     padding-inline: var(--unit-s);
 }
 
-
 /* GRID SYSTEM (12 column) */
 
 .row {
     --grid-gap: var(--unit-s);
 }
 
-.row > * {
+.row>* {
     margin-block-end: var(--grid-gap);
 }
 
 /* NEW width SYNTAX (updated from min-width: 768px)  */
-@media ( width >= 768px ) {
-   
+@media (width >=768px) {
+
     .row {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -320,47 +329,141 @@ html {
     }
 
     /* COMMONLY USED SEMANTIC COLUMNS */
-    .one-whole { grid-column: auto / span 12; }
-    .one-half { grid-column: auto / span 6; }
-    .one-third { grid-column: auto / span 4; }
-    .two-thirds { grid-column: auto / span 8; }
-    .one-fourth { grid-column: auto / span 3; }
-    .three-fourths { grid-column: auto / span 9; }
+    .one-whole {
+        grid-column: auto / span 12;
+    }
+
+    .one-half {
+        grid-column: auto / span 6;
+    }
+
+    .one-third {
+        grid-column: auto / span 4;
+    }
+
+    .two-thirds {
+        grid-column: auto / span 8;
+    }
+
+    .one-fourth {
+        grid-column: auto / span 3;
+    }
+
+    .three-fourths {
+        grid-column: auto / span 9;
+    }
 
     /* SWAP (REVERSE COLUMNS) - WORKS ONLY w/ 2 COLUMNS */
-    .row.swapped > *:first-child { order: 2; }
-    .row.swapped > *:last-child { order: 1; }
+    .row.swapped>*:first-child {
+        order: 2;
+    }
+
+    .row.swapped>*:last-child {
+        order: 1;
+    }
 
     /* CENTERED COLUMNS */
-    .one-half.centered { grid-column-start: 4;}
-    .two-thirds.centered { grid-column-start: 3;}
+    .one-half.centered {
+        grid-column-start: 4;
+    }
+
+    .two-thirds.centered {
+        grid-column-start: 3;
+    }
 
     /* 12 COLUMN CLASS-BASED GRID SYSTEM */
-    .col-1 { grid-column: auto / span 1; }
-    .col-2 { grid-column: auto / span 2; }
-    .col-3 { grid-column: auto / span 3; }
-    .col-4 { grid-column: auto / span 4; }
-    .col-5 { grid-column: auto / span 5; }
-    .col-6 { grid-column: auto / span 6; }
-    .col-7 { grid-column: auto / span 7; }
-    .col-8 { grid-column: auto / span 8; }
-    .col-9 { grid-column: auto / span 9; }
-    .col-10 { grid-column: auto / span 10; }    
-    .col-11 { grid-column: auto / span 11; }   
-    .col-12 { grid-column: auto / span 12; } 
-    
+    .col-1 {
+        grid-column: auto / span 1;
+    }
+
+    .col-2 {
+        grid-column: auto / span 2;
+    }
+
+    .col-3 {
+        grid-column: auto / span 3;
+    }
+
+    .col-4 {
+        grid-column: auto / span 4;
+    }
+
+    .col-5 {
+        grid-column: auto / span 5;
+    }
+
+    .col-6 {
+        grid-column: auto / span 6;
+    }
+
+    .col-7 {
+        grid-column: auto / span 7;
+    }
+
+    .col-8 {
+        grid-column: auto / span 8;
+    }
+
+    .col-9 {
+        grid-column: auto / span 9;
+    }
+
+    .col-10 {
+        grid-column: auto / span 10;
+    }
+
+    .col-11 {
+        grid-column: auto / span 11;
+    }
+
+    .col-12 {
+        grid-column: auto / span 12;
+    }
+
     /* PUSHES */
-    .push-1 { grid-column-start: 2; }
-    .push-2 { grid-column-start: 3; }
-    .push-3 { grid-column-start: 4; }
-    .push-4 { grid-column-start: 5; }
-    .push-5 { grid-column-start: 6; }
-    .push-6 { grid-column-start: 7; }
-    .push-7 { grid-column-start: 8; }
-    .push-8 { grid-column-start: 9; }
-    .push-9 { grid-column-start: 10; }
-    .push-10 { grid-column-start: 11; } 
-    .push-11 { grid-column-start: 12; }           
+    .push-1 {
+        grid-column-start: 2;
+    }
+
+    .push-2 {
+        grid-column-start: 3;
+    }
+
+    .push-3 {
+        grid-column-start: 4;
+    }
+
+    .push-4 {
+        grid-column-start: 5;
+    }
+
+    .push-5 {
+        grid-column-start: 6;
+    }
+
+    .push-6 {
+        grid-column-start: 7;
+    }
+
+    .push-7 {
+        grid-column-start: 8;
+    }
+
+    .push-8 {
+        grid-column-start: 9;
+    }
+
+    .push-9 {
+        grid-column-start: 10;
+    }
+
+    .push-10 {
+        grid-column-start: 11;
+    }
+
+    .push-11 {
+        grid-column-start: 12;
+    }
 }
 
 /* 横並びにする */
@@ -384,14 +487,16 @@ html {
 } */
 
 .one-half {
-  width: 70%;
-  position: relative; /* 内部の絶対配置に必要 */
-  text-align: left;   /* 左寄せ */
+    width: 70%;
+    position: relative;
+    /* 内部の絶対配置に必要 */
+    text-align: left;
+    /* 左寄せ */
 }
 
 
 /* FOR DEMO PURPOSES ONLY */
-.row.demo > * {
+.row.demo>* {
     background-color: #F5F3EC;
     text-align: center;
     padding: var(--unit-s);
@@ -495,17 +600,27 @@ html {
 
 
 /* SMALL SCREEN: SHOW MENU BUTTON, HIDE NAV */
-.site-nav .menubutton { display: block; }
-.site-nav ul { display: none; }
+.site-nav .menubutton {
+    display: block;
+}
+
+.site-nav ul {
+    display: none;
+}
 
 /* BIG SCREEN: SHOW MENU BUTTON< HIDE NAV */
-@media ( width >= 768px ) {
-    .site-nav .menubutton { display: none; }
-    .site-nav ul { display: flex; }
+@media (width >=768px) {
+    .site-nav .menubutton {
+        display: none;
+    }
+
+    .site-nav ul {
+        display: flex;
+    }
 }
 
 /* SMALL SCREEN ONLY: ENABLE OVERLAY NAV */
-@media ( width < 768px ) {
+@media (width < 768px) {
 
     .site-nav[data-menustate] ul {
         display: grid;
@@ -547,22 +662,27 @@ html {
     .site-nav .simple-navicon {
         display: block;
     }
+
     .site-nav .simple-navicon rect {
         transform-origin: center;
         width: 100%;
     }
+
     .site-nav[data-menustate="open"] .simple-navicon-top {
         position: fixed;
         top: calc(var(--unit-s) + var(--unit-s));
         right: calc(var(--unit-s) + var(--unit-xs));
     }
+
     .site-nav[data-menustate="open"] .simple-navicon-top {
         rotate: 45deg;
         translate: -21% 24%;
     }
+
     .site-nav[data-menustate="open"] .simple-navicon-middle {
         opacity: 0;
     }
+
     .site-nav[data-menustate="open"] .simple-navicon-bottom {
         rotate: -45deg;
         translate: -21% -24%;
@@ -581,6 +701,14 @@ section {
     padding-block: var(--unit-2xl);
 }
 
+#about {
+    background-color: #eae5d6;
+}
+
+#tea-bar-zen {
+    background-color: #eae5d6;
+}
+
 /* HERO SECTION  */
 .hero {
     background-color: var(--color-hero-background);
@@ -590,29 +718,31 @@ section {
     background-size: cover;
     background-position: center;
     color: #fff;
-    
+
     h1 {
-    font-family: "Kaushan Script", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 5em;
-    line-height: 1;
+        font-family: "Kaushan Script", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 5em;
+        line-height: 1;
     }
 
     h2 {
-    font-family: "Long Cang", cursive;
-    font-weight: 450;
-    font-style: normal;
-    font-size: var(--unit-3xl); 
-    margin: 0;   
+        font-family: "Long Cang", cursive;
+        font-weight: 450;
+        font-style: normal;
+        font-size: var(--unit-3xl);
+        margin: 0;
     }
-    
+
     h3 {
-    opacity: 80;
+        opacity: 80;
     }
-    
-    h1, h2, h3 {
-        color: #fff; 
+
+    h1,
+    h2,
+    h3 {
+        color: #fff;
     }
 }
 
@@ -633,29 +763,31 @@ section {
 
 /* SITE FOOTER */
 .site-footer {
-  position: relative;
-  width: 100%;
-  display: inline-block; /* 中身の高さに合わせる */
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    /* 中身の高さに合わせる */
 }
 
 .footer-bg {
-  width: 100%;
-  height: auto;       /* 画像の縦横比を保つ */
-  display: block;
+    width: 100%;
+    height: auto;
+    /* 画像の縦横比を保つ */
+    display: block;
 }
 
 .footer-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: white;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hover-image.footer {
@@ -675,51 +807,54 @@ section {
 /* BOTTONS */
 
 .button.hand-drawn {
-  display: inline-block;
-  padding: 1em 1.5em;
-  color: #814D22;
-  text-decoration: none;
-  border-radius: 300px 100px 225px 100px/35px 225px 35px 255px;
-  border: solid 2px #814D22;
-  background-color: #F5F3EC;
-  
-  &:hover {
-    background-color: #814D22;
-    color: var(--color-white);
-  }
-  
+    display: inline-block;
+    padding: 1em 1.5em;
+    color: #814D22;
+    text-decoration: none;
+    border-radius: 300px 100px 225px 100px/35px 225px 35px 255px;
+    border: solid 2px #814D22;
+    background-color: #F5F3EC;
+
+    &:hover {
+        background-color: #814D22;
+        color: var(--color-white);
+    }
+
 }
 
 /* You can find the full CSS code in the referenced web documents */
 .dropdown {
-  position: relative; /* Container for the dropdown */
-  display: inline-block;
+    position: relative;
+    /* Container for the dropdown */
+    display: inline-block;
 }
 
 .dropbtn {
-  /* Styling for the button */
+    /* Styling for the button */
 }
 
 .dropdown-content {
-  display: none; /* Hidden by default */
-  position: absolute;
-  /* box styling */
-  width: 115px;
-  padding: 3px;
-  background-color: #9c612d;
-  border-radius: 10px;
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    /* box styling */
+    width: 115px;
+    padding: 3px;
+    background-color: #9c612d;
+    border-radius: 10px;
 }
 
 .dropdown-content a {
-  /* Styling for links */
+    /* Styling for links */
 }
 
 .dropdown-content a:hover {
-  /* Styling for hovered links */
+    /* Styling for hovered links */
 }
 
 .dropdown:hover .dropdown-content {
-  display: block; /* Show on hover */
+    display: block;
+    /* Show on hover */
 }
 
 
@@ -766,7 +901,7 @@ pre:has(code) {
 
 
 /* MOVE SWIDER ARROWS OYRSIDE OF SWIPER */
-.swiper-button-prev, 
+.swiper-button-prev,
 .swiper-button-next {
     background-color: var(--color-white);
     padding: var(--unit-xs);
@@ -811,7 +946,7 @@ body {
 }
 
 /* TO FIX OVERFLOW WORD BREAK */
-body > * {
+body>* {
     min-width: 0;
 }
 
@@ -829,7 +964,7 @@ body > * {
     justify-content: ; */
 }
 
-.site-header.on-top-of-hero + .site-main .hero {
+.site-header.on-top-of-hero+.site-main .hero {
     padding-block-start: calc(var(--unit-4xl) + var(--unit-xl));
 }
 
@@ -841,7 +976,7 @@ body > * {
 
 /* CUSTOM PAGE LAYOUT - 2 COLUMNS: ASIDE + MAIN CONTENT */
 
-@media ( width >= 768px ) {
+@media (width >=768px) {
 
     .pagelayout-wrapper-twocolumn {
         display: flex;
@@ -869,7 +1004,7 @@ body > * {
 
 .zen-eyebrow {
     font-size: .875rem;
-    font-weight: bold; 
+    font-weight: bold;
     text-transform: var(--unit-xs);
     opacity: .5;
     line-height: 1;
@@ -899,7 +1034,7 @@ body > * {
 .scale-and-fade-in {
     animation-name: slide-from-top-and-fade-in;
     animation-duration: 1s;
-    animation-timing-function: cubic-bezier(0,.5,.5,1);
+    animation-timing-function: cubic-bezier(0, .5, .5, 1);
     animation-fill-mode: forwards;
     opacity: 0;
     translate: 0 -40px;
@@ -910,6 +1045,7 @@ body > * {
         opacity: 0;
         translate: 0 -40px;
     }
+
     100% {
         opacity: 1;
         translate: 0 0;
@@ -919,7 +1055,7 @@ body > * {
 .slide-from-left-and-fade-in {
     animation-name: slide-from-left-and-fade-in;
     animation-duration: 2s;
-    animation-timing-function: cubic-bezier(0,1,0,1);
+    animation-timing-function: cubic-bezier(0, 1, 0, 1);
     animation-fill-mode: forwards;
     opacity: 0;
     translate: -20px 0;
@@ -930,24 +1066,45 @@ body > * {
         opacity: 0;
         translate: -20px 0;
     }
+
     100% {
         opacity: 1;
         translate: 0 0;
     }
 }
 
-.delay-0 { animation-delay: 0s; }
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
-.delay-4 { animation-delay: 0,5s; }
-.delay-5 { animation-delay: 0,7s; }
-.delay-6 { animation-delay: 0,9s; }
+.delay-0 {
+    animation-delay: 0s;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0, 5s;
+}
+
+.delay-5 {
+    animation-delay: 0, 7s;
+}
+
+.delay-6 {
+    animation-delay: 0, 9s;
+}
 
 /* SCROLL-TRIGGERED ANIMATION */
 
 /* FIX SCROLL BAR ON ALL SCROLL ANIMATION SECTIONS */
-section:has(.observe-me)  {
+section:has(.observe-me) {
     overflow-x: clip;
 }
 
@@ -968,9 +1125,10 @@ section:has(.observe-me)  {
         opacity var(duration).5s linear .2s(--delay); */
 
 }
+
 .observe-me[data-viewstate="active"].onscroll-slide-in-from-left {
- opacity: 1;
- translate: 0 0;
+    opacity: 1;
+    translate: 0 0;
 }
 
 /* on scroll slide-in for the right */
@@ -981,58 +1139,101 @@ section:has(.observe-me)  {
     translate: 20px 0;
     transition: all .5s ease-out .2s;
 }
+
 .observe-me[data-viewstate="active"].onscroll-slide-in-from-right {
- opacity: 1;
- translate: 0 0;
+    opacity: 1;
+    translate: 0 0;
 }
 
-.observe-me.delay-0 { transition-delay: 0s; }
-.observe-me.delay-1 { transition-delay: 0.1s; }
-.observe-me.delay-2 { transition-delay: 0.2s; }
-.observe-me.delay-3 { transition-delay: 0.3s; }
-.observe-me.delay-4 { transition-delay: 0.5s; }
-.observe-me.delay-5 { transition-delay: 0.7s; }
-.observe-me.delay-6 { transition-delay: 0.9s; }
+.observe-me.delay-0 {
+    transition-delay: 0s;
+}
+
+.observe-me.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.observe-me.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.observe-me.delay-3 {
+    transition-delay: 0.3s;
+}
+
+.observe-me.delay-4 {
+    transition-delay: 0.5s;
+}
+
+.observe-me.delay-5 {
+    transition-delay: 0.7s;
+}
+
+.observe-me.delay-6 {
+    transition-delay: 0.9s;
+}
 
 
 /* SPEECH BUBBLE */
 .speech-bubble {
     /* メインの吹き出しのスタイル */
-    position: relative; /* 疑似要素の基準位置 */
+    position: relative;
+    /* 疑似要素の基準位置 */
     width: max(35%, 300px);
-    padding: 60px;
-    border-radius: 60px; /* 角丸 */
-    background-color: var(--color-green); /* 白い背景 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影 */
+    padding: 40px;
+    border-radius: 50px;
+    /* 角丸 */
+    background-color: var(--color-green);
+    /* 白い背景 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 影 */
     /* テキストのはみ出し防止 */
     word-wrap: break-word;
     line-height: 1.5;
     /* この例の位置は固定値です。配置したい場所に合わせて調整してください */
-    margin: 50px 0 0 0px; 
+    margin: -50px;
     animation: moveX 10s ease-in-out infinite, floatY 2s ease-in-out infinite;
 }
 
 @keyframes moveX {
-  0%   { transform: translateX(-14px); }
-  50%   { transform: translateX(10px); }
-  100% { transform: translateX(-14px); }
+    0% {
+        transform: translateX(-14px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(-14px);
+    }
 }
 
 /* ふわふわ上下 */
 @keyframes floatY {
-0%   { transform: translateY(-10px); }
-  50%   { transform: translateY(10px); }
-  100% { transform: translateY(-10px); }
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
 .speech-bubble.top-right {
-    margin-left: auto;   /* 左側のマージンを自動的に最大まで広げる */
+    margin-left: auto;
+    /* 左側のマージンを自動的に最大まで広げる */
     margin-right: 0;
     animation-duration: 12s, 3.5s;
 }
 
 .speech-bubble.top-left {
-    margin-left: 20%;   /* 左側のマージンを自動的に最大まで広げる */
+    margin-left: 10%;
+    /* 左側のマージンを自動的に最大まで広げる */
     margin-right: 0;
     animation-duration: 10s, 4s;
 }
@@ -1047,18 +1248,19 @@ section:has(.observe-me)  {
     width: 100%;
     height: 100%;
     /* 角丸も親要素と同じに設定 */
-    border-radius: inherit; 
-    
+    border-radius: inherit;
+
     /* 背景を透明にし、境界線のみ表示 */
     background: transparent;
-    border: 2px solid #814D22; /* 境界線のスタイルと色 */
-    
+    border: 2px solid #814D22;
+    /* 境界線のスタイルと色 */
+
     /* 背面に配置 */
-    z-index:  1;
-    
+    z-index: 1;
+
     /* ここで位置をずらす（オフセット） */
-    top: 5px;
-    left: 5px; 
+    top: 4px;
+    left: 5px;
 }
 
 #speech-bubble .container {
@@ -1068,15 +1270,17 @@ section:has(.observe-me)  {
 /* 画面の幅が600px以下になったら縦並びにする（ブレークポイントの設定） */
 @media (max-width: 600px) {
     .speech-bubble {
-        flex-direction: column; /* 方向を縦（列）に変更する */
+        flex-direction: column;
+        /* 方向を縦（列）に変更する */
     }
 
-    
+
 }
 
 /* RESERVATION & DIAMONDHEAD*/
 #tea-bar-zen {
-  position: relative; /* 子要素をabsoluteで動かすために必要 */
+    position: relative;
+    /* 子要素をabsoluteで動かすために必要 */
 }
 
 #how-you-can-find-us .vertical-text {
@@ -1144,7 +1348,8 @@ section:has(.observe-me)  {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    padding: 0;  /* 縦余白だけ */
+    padding: 0;
+    /* 縦余白だけ */
     height: auto;
     display: block;
     min-height: 900px;
@@ -1180,14 +1385,14 @@ section:has(.observe-me)  {
     height: auto;
     /* scale: 1.1; */
 
-    @media ( width > 768px ) { 
+    @media (width > 768px) {
         padding-top: 100px;
     }
 
     /* @media( width < 768px ) {
         padding-left: 20px;
     } */
-    
+
 }
 
 /* SITE FOOTER */
@@ -1219,7 +1424,7 @@ footer {
 
 /* ボタン画像をきれいに */
 .footer-content .button img {
-    width: 10vw;   
+    width: 10vw;
     /* max-width: 100px; */
     min-width: 1px;
     height: auto;
@@ -1261,27 +1466,33 @@ footer {
 }
 
 .clouds-container {
-  position: absolute; /* 背景として配置 */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* セクションの縦幅に合わせる */
-  pointer-events: none; /* 雲がクリックを邪魔しない */
-  overflow: hidden;
-  z-index: 1; /* コンテンツより下に置く場合は0に調整 */
+    position: absolute;
+    /* 背景として配置 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* セクションの縦幅に合わせる */
+    pointer-events: none;
+    /* 雲がクリックを邪魔しない */
+    overflow: hidden;
+    z-index: 1;
+    /* コンテンツより下に置く場合は0に調整 */
 }
 
 .cloud {
-  position: absolute;
-  top: 10%; /* 適当に調整 */
-  left: 20%; /* 適当に調整 */
-  width: 200px;
-  height: auto;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-  transform-origin: center center;
-  transition: transform 0.2s linear, opacity 0.2s linear;
+    position: absolute;
+    top: 10%;
+    /* 適当に調整 */
+    left: 20%;
+    /* 適当に調整 */
+    width: 250px;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    transform-origin: center center;
+    transition: transform 0.2s linear, opacity 0.2s linear;
 }
 
 .hover-image.about:hover {
@@ -1295,9 +1506,11 @@ footer {
 .hover-image.reservation:hover {
     background-image: url('../img/after-hover-reservation.png');
 }
+
 .hover-image.location:hover {
     background-image: url('../img/after-hover-location.png');
 }
+
 .hover-image.contact:hover {
     background-image: url('../img/after-hover-contact.png');
 }
@@ -1310,6 +1523,7 @@ footer {
     transition: transform .3s ease;
     /* scale: 1.25; */
 }
+
 .button:hover img {
     transform: scale(1.1);
 }
@@ -1322,12 +1536,16 @@ footer {
 /* Menu */
 .options-menu {
     /* メインの吹き出しのスタイル */
-    position: relative; /* 疑似要素の基準位置 */
+    position: relative;
+    /* 疑似要素の基準位置 */
     max-width: 900px;
     padding: 40px;
-    border-radius: 13px; /* 角丸 */
-    background-color: var(--color-green); /* 白い背景 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影 */
+    border-radius: 13px;
+    /* 角丸 */
+    background-color: var(--color-green);
+    /* 白い背景 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 影 */
     /* テキストのはみ出し防止 */
     word-wrap: break-word;
     line-height: 0.5;
